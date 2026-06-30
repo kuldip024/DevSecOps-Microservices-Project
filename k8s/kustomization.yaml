@@ -1,0 +1,59 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: devsecops
+
+# Resources to include
+resources:
+  - user-service.yaml
+  - product-service.yaml
+  - frontend.yaml
+  - istio-config.yaml
+
+# Common labels for all resources
+commonLabels:
+  app.kubernetes.io/name: devsecops
+  app.kubernetes.io/instance: production
+  app.kubernetes.io/version: "1.0.0"
+  app.kubernetes.io/managed-by: argocd
+
+# Common annotations
+commonAnnotations:
+  description: "DevSecOps Microservices Application"
+  team: "platform-engineering"
+  environment: "production"
+
+# Image transformer for updating images
+images:
+  - name: devsecops/user-service
+    newName: devsecops/user-service
+    newTag: latest
+  - name: devsecops/product-service
+    newName: devsecops/product-service
+    newTag: latest
+  - name: devsecops/frontend
+    newName: devsecops/frontend
+    newTag: latest
+
+# ConfigMap generator
+configMapGenerator:
+  - name: app-config
+    literals:
+      - APP_ENV=production
+      - LOG_LEVEL=info
+      - API_TIMEOUT=30s
+
+# Replicas patches
+replicas:
+  - name: user-service
+    count: 2
+  - name: product-service
+    count: 2
+  - name: frontend
+    count: 2
+
+# Metadata for tracking
+metadata:
+  name: devsecops
+  labels:
+    version: "1.0.0"

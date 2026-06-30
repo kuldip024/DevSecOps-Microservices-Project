@@ -1,0 +1,51 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devsecops-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/yourusername/devsecops-project.git
+    targetRevision: main
+    path: k8s
+    kustomize:
+      version: v4.5.7
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: devsecops
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allow:
+        empty: false
+    syncOptions:
+    - CreateNamespace=true
+    - PrunePropagationPolicy=foreground
+    - RespectIgnoreDifferences=true
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+  revisionHistoryLimit: 10
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devsecops-deployment-config
+  namespace: argocd
+data:
+  image-tag: "latest"
+  registry: "docker.io"
+  services: |
+    - name: user-service
+      image: devsecops/user-service
+    - name: product-service
+      image: devsecops/product-service
+    - name: frontend
+      image: devsecops/frontend
