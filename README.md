@@ -417,7 +417,7 @@ Perfect for learning, portfolio building, and production deployments!
 ##  Support & Contact
 
 -  Email: [kuldipramavat34@gmail.com]
-- 🐙GitHub: [@kuldip024](https://github.com/kuldip024)
+-  GitHub: [@kuldip024](https://github.com/kuldip024)
 
 
 ---
