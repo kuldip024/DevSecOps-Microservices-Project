@@ -13,7 +13,6 @@ A production-ready, secure microservices architecture demonstrating modern DevSe
 
 - [Overview](#overview)
 - [Features](#features)
-- [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
 - [Project Structure](#project-structure)
@@ -66,13 +65,7 @@ Perfect for learning DevSecOps, microservices architecture, and modern DevOps pr
 -  **Tracing Ready** - Jaeger distributed tracing
 -  **Logging** - Structured logging for all services
 
----
-
-## Architecture
-
-```
-c:\Users\Admin\Downloads\devsecops-project\Architecture.png
-```
+---`
 
 ---
 
