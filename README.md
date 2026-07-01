@@ -1,4 +1,4 @@
-# DevSecOps Microservices Platform
+# DevSecOps Microservices Project
 
 A production-ready, secure microservices architecture demonstrating modern DevSecOps practices with automated CI/CD pipelines, Kubernetes orchestration, and Istio service mesh integration.
 
