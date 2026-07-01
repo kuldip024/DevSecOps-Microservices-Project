@@ -346,16 +346,6 @@ Contributions are welcome! Here's how to get started:
 - Follow security best practices
 - Test before submitting PR
 
----
-
-##  Documentation
-
-- **[Local Setup Guide](./LOCAL_SETUP_NO_DOCKER.md)** - Run without Docker
-- **[Architecture Guide](./ARCHITECTURE_GUIDE.md)** - Deep dive into system design
-- **[Windows Setup Guide](./WINDOWS_SETUP.md)** - Windows-specific instructions
-- **[Quick Start](./QUICKSTART.md)** - Fast setup guide
-
----
 
 ##  Troubleshooting
 
@@ -420,6 +410,7 @@ Perfect for learning, portfolio building, and production deployments!
 - Istio project
 - Jenkins community
 - ArgoCD project
+- Draw.io
 
 ---
 
