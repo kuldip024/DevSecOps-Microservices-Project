@@ -2,7 +2,6 @@
 
 A production-ready, secure microservices architecture demonstrating modern DevSecOps practices with automated CI/CD pipelines, Kubernetes orchestration, and Istio service mesh integration.
 
-![GitHub Stars](https://img.shields.io/github/stars/kuldip024/devsecops-project?style=social)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
 ![Kubernetes](https://img.shields.io/badge/kubernetes-1.24+-blue)
