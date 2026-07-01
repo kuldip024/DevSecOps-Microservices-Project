@@ -166,11 +166,6 @@ devsecops-project/
 ├── cd/
 │   └── argocd-app.yaml            # ArgoCD application
 │
-├── scripts/
-│   ├── git-setup.sh               # Git initialization
-│   ├── deploy-k8s.sh              # K8s automation
-│   └── jenkins-setup.sh           # Jenkins guide
-│
 ├── docker-compose.yml             # Local orchestration
 ├── Makefile                       # Development commands
 └── README.md                      # This file
