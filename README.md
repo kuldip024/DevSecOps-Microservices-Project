@@ -111,10 +111,7 @@ docker-compose up --build
 
 ### Kubernetes Deployment
 ```bash
-# Install Istio (optional)
-./scripts/deploy-k8s.sh
-
-# Or manually
+# Install Istio
 kubectl apply -f k8s/
 kubectl apply -f k8s/istio-config.yaml
 ```
